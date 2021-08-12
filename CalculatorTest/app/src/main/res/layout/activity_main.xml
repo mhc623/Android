@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:padding="10dp"
+       android:background="#11000000">
+      /*
+      EditText设计，数字在右下方，输入的数字换种颜色，不能在框中输入，有提示输入
+      */
+      <EditText
+          android:id="@+id/editText"
+          android:background="@drawable/white_bg"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:gravity="bottom|right"
+          android:padding="10dp"
+          android:maxLines="2"
+          android:hint="请按键输入..."
+          android:editable="false"
+          android:textSize="30sp"
+          android:textColor="#4876ff"
+          android:textStyle="bold"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:layout_marginTop="10dp">
+
+         /*
+         第一行布局，全清C按键，后退一步DEL按键，乘除按键
+         */
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_clean"
+                android:text="C"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/btn_delete"
+                android:text="DEL"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/btn_div"
+                android:text="÷"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/btn_mul"
+                android:text="×"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+         </LinearLayout>
+
+
+         /*
+         第二行布局,9,8,7按键,加号按键
+         */
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_9"
+                android:text="9"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#030303"/>
+            <Button
+                android:id="@+id/btn_8"
+                android:text="8"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#030303"/>
+            <Button
+                android:id="@+id/btn_7"
+                android:text="7"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#030303"/>
+            <Button
+                android:id="@+id/btn_add"
+                android:text="+"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+         </LinearLayout>
+
+
+         /*
+         第三行按键6,5,4,按键,减号按键
+         */
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_6"
+                android:text="6"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#030303"/>
+            <Button
+                android:id="@+id/btn_5"
+                android:text="5"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#030303"/>
+            <Button
+                android:id="@+id/btn_4"
+                android:text="4"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#030303"/>
+            <Button
+                android:id="@+id/btn_sub"
+                android:text="-"
+                android:gravity="bottom|right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+         </LinearLayout>
+
+
+         /*
+         第四大行,等号按键,加两小行
+         */
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="0.8"
+             android:orientation="horizontal">
+
+            /*
+            第四大行第一小行,3,2,1按键
+            */
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_weight="1">
+
+                  <Button
+                      android:id="@+id/btn_3"
+                      android:text="3"
+                      android:gravity="bottom|right"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:textColor="#030303"/>
+                  <Button
+                      android:id="@+id/btn_2"
+                      android:text="2"
+                      android:gravity="bottom|right"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:textColor="#030303"/>
+                  <Button
+                      android:id="@+id/btn_1"
+                      android:text="1"
+                      android:gravity="bottom|right"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:textColor="#030303"/>
+
+               </LinearLayout>
+
+               /*
+               第四大行第二小行，进制转换按钮,0和‘.’按键
+               */
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_weight="1">
+
+                  <Button
+                      android:id="@+id/btn_numeration"
+                      android:text="进制转换"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:textColor="#0000ff"/>
+                  <Button
+                      android:id="@+id/btn_0"
+                      android:text="0"
+                      android:gravity="bottom|right"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:textColor="#030303"/>
+                  <Button
+                      android:id="@+id/btn_point"
+                      android:text="."
+                      android:gravity="bottom|right"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:textColor="#030303"/>
+               </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_equal"
+                android:text="="
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="bottom|right"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="4dp">
+
+            </Button>
+
+
+
+
+         </LinearLayout>
+
+
+      </LinearLayout>
+
+   </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
